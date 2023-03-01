@@ -1,3 +1,8 @@
+/* VARIABLES */
+:root {
+    --nav-bell-color: #FB8F00;
+}
+
 /* RESET */
 img {
     max-width: 100%;
@@ -12,18 +17,37 @@ img {
 }
 
 /* Header */
-header {
-    /* debug */
-    background-color: red;
-    height: 10%;
+
+/* Bell-button */
+.navbar-toggler {
+    border: 0;
 }
+
+.ms_bell i {
+    color: var(--nav-bell-color);
+    font-size: 1.2rem;
+}
+.ms_bell:after {
+    display: none;
+}
+
+.dropdown-menu.show {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(-80%,0);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* /Bell-button */
+
 /* /Header */
 
 /* Main */
 
 .ms_main {
     width: 100%;
-    height: 90%;
 }
 
 /* Side-nav */
@@ -37,10 +61,6 @@ header {
 @media screen and (min-width: 992px) {
     .ms_nav {
         width: 20%;
-    }
-
-    .ms_content {
-        width: 80%;
     }
 }
 /* /Side-nav */
