@@ -24,30 +24,30 @@
     <!-- WEB APP -->
     <div class="ms_wrapper d-flex flex-column">
         <!-- Header -->
-        <nav class="navbar bg-light">
+        <nav class="navbar bg-light ms_header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <!-- small logo -->
-                    <img src="img/mobile-logo.png" width="50px" alt="Mobile logo" class="d-lg-none">
+                    <img src="img/mobile-logo.png" alt="Mobile logo" class="d-md-none ms_logoimg">
                     <!-- /small logo -->
 
-                    <img src="img/logo.svg" alt="logo" class="d-none d-lg-inline-block">
+                    <img src="img/logo.svg" alt="logo" class="d-none d-md-inline-block">
                 </a>
                 <form class="flex-fill" role="search">
                     <input class="form-control me-2" type="search" placeholder="Prova a cercare:" aria-label="Search">
                 </form>
-                <ul class="navbar-nav flex-row mb-2 mb-lg-0">
-                    <li class="nav-item mx-2 d-none d-lg-inline-block">
+                <ul class="navbar-nav flex-row mb-md-0">
+                    <li class="nav-item mx-2 d-none d-md-inline-block">
                         <a class="nav-link" aria-current="page" href="#">
                             <i class="fa-solid fa-list"></i>
                         </a>
                     </li>
-                    <li class="nav-item mx-2 d-none d-lg-inline-block">
+                    <li class="nav-item mx-2 d-none d-md-inline-block">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-circle-question"></i>
                         </a>
                     </li>
-                    <li class="nav-item mx-2 d-none d-lg-inline-block">
+                    <li class="nav-item mx-2 d-none d-md-inline-block">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </a>
@@ -81,21 +81,400 @@
         <!-- Header -->
 
         <!-- Main -->
-        <main class="ms_main d-flex h-100">
+        <main class="ms_main d-flex">
 
             <!-- Side-nav -->
             <div class="ms_nav">
-                <div class="container-fluid">
-
+                <div class="container-fluid h-100">
+                    <ul class="nav flex-column h-100 py-4 w-100">
+                        <li class="nav-item ">
+                            <a class="nav-link p-2 w-100" aria-current="page" href="#">
+                                <i class="fa-solid fa-house"></i>
+                                <div class="d-none d-lg-inline-block">Home</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 w-100" href="#">
+                                <i class="fa-sharp fa-solid fa-chart-simple"></i>
+                                <div class="d-none d-lg-inline-block">Stats</div>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link p-2 w-100" href="#">
+                                <i class="fa-solid fa-signal"></i>
+                                <div class="d-none d-lg-inline-block ">Signals</div>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-auto">
+                            <a class="nav-link p-2 w-100" href="#">
+                                <i class="fa-sharp fa-solid fa-gear"></i>
+                                <div class="d-none d-lg-inline-block mx-2">Admin</div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- /Side-nav -->
 
             <!-- Main-content -->
-            <div class="ms_content flex-grow-1">
+            <div class="ms_content h-100 overflow-auto">
+                <div class="ms_jumbotron">
+                    <div class="container-fluid py-3">
+                        <div class="row justify-content-between">
+                            <!-- add-student-button -->
+                            <div class="col-12 col-md-auto order-md-3 lg-text-center">
+                                <span>Nuovo studente</span>
+                                <a class="btn btn-outline-light" data-bs-toggle="offcanvas" href="#offcanvasRight"
+                                    role="button" aria-controls="offcanvasExample">
+                                    +
+                                </a>
+                                <!-- OFFCANVAS -->
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                                    aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                                            Offcanvas right
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        ...
+                                    </div>
+                                </div>
+                                <!-- /OFFCANVAS -->
+                            </div>
+                            <!-- /add-student-button -->
 
-            </div>
-            <!-- /Main-content -->
+                            <!-- jumbo-title -->
+                            <div class="col-12 col-md-auto my-3 my-md-0">
+                                <div class="ms_plantitle d-flex align-items-center">
+                                    <h2 class="me-2">Boolean</h2>
+                                    <span class="badge rounded-pill">
+                                        Piano blaze
+                                    </span>
+                                </div>
+
+                                <div class="ms_planapp d-flex flex-wrap">
+                                    <span class="badge rounded-pill me-1">
+                                        3 app
+                                    </span>
+                                    <i class="fa-solid fa-angles-right me-1"></i>
+                                    <span class="badge rounded-pill me-1 d-lg-none">
+                                        +
+                                    </span>
+                                    <span class="badge rounded-pill me-1 d-none d-lg-inline-block">
+                                        Boolean mobile app
+                                    </span>
+                                    <span class="badge rounded-pill me-1 d-none d-lg-inline-block">
+                                        Boolean web app
+                                    </span>
+                                    <span class="badge rounded-pill me-1 d-none d-lg-inline-block">
+                                        Boolean blog app
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /jumbo-title -->
+
+                            <!-- student-counter -->
+                            <div class="col-12 col-md-3 col-lg-2 col-xl-3">
+                                <p>
+                                    Studenti online negli ultimi 30 minuti
+                                </p>
+                                <h2>125</h2>
+                            </div>
+                            <!-- /student-counter -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row mb-3 py-3">
+                        <div class="col-12 col-lg-8">
+                            <!-- STUDENT CARD -->
+                            <div class="card mb-3">
+                                <h5 class="card-header">Prossime classi</h5>
+                                <div class="card-body">
+                                    <table class="table align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col" class="text-center d-none d-lg-table-cell">Data Inizio
+                                                </th>
+                                                <th scope="col" class="text-center d-none d-md-table-cell">ROI</th>
+                                                <th scope="col" class="text-center">Stato</th>
+                                                <th scope="col" class="text-center">Azioni</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 75</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">15 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 76</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">16 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 77</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">17 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-warning">Process</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 78</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">18 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 79</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">19 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-danger">Failed</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 80</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">20 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 81</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">21 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-danger">Failed</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ms_tableimg">
+                                                        <img class="rounded-circle" src="img/class-avatar.jpg" alt="">
+                                                    </div>
+                                                    <p class="d-inline-block m-0">Classe 82</p>
+                                                </td>
+                                                <td class="text-center d-none d-lg-table-cell">22 Feb 2021</td>
+                                                <td class="text-center d-none d-md-table-cell">20%</td>
+                                                <td class="text-center">
+                                                    <span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-outline-secondary">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /STUDENT CARD -->
+
+
+                            <!-- FAQ CARD -->
+                            <div class="card mb-3">
+                                <h5 class="card-header">
+                                    F.A.Q.
+                                </h5>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                Come aggiungere un nuovo studente?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Clicca sull + in alto nella sezione blu.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Clicca sull'icona della campanella.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Si.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /FAQ CARD -->
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="card mb-3">
+                                <h5 class="card-header">Todo</h5>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                          <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                          <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                          <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                                        </li>
+                                      </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/stats.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Utenti attivi</h5>
+                                  <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Gennaio: 1200</li>
+                                  <li class="list-group-item">Febbraio: 800</li>
+                                  <li class="list-group-item">Marzo: 1500</li>
+                                </ul>
+                                <div class="card-body">
+                                  <a href="#" class="card-link">Visualizza report approfondito</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Main-content -->
         </main>
         <!-- Main -->
 
